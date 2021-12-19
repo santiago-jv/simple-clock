@@ -1,0 +1,104 @@
+:root {
+    --grayish-blue: hsl(237, 18%, 59%);
+    --soft-red: hsl(345, 95%, 68%);
+    --white: hsl(0, 0%, 100%);
+    --dark-desaturated-blue: hsl(236, 21%, 26%);
+    --very-dark-blue: hsl(235, 16%, 14%);
+    --very-dark-mostly-black-blue: hsl(234, 17%, 12%);
+}
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body {
+    background-image: url(../images/bg-stars.svg);
+    background-color: var(--very-dark-blue);
+    position: relative;
+    min-height: 100vh;
+    font-size: 14px;
+    font-family: 'Red Hat Text', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+h1{
+    text-align: center;
+    margin-top:2rem;
+    font-size: 4rem;
+    color:var(--grayish-blue);
+}
+.decoration{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+.clock{
+    width:90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+}
+.separator{
+    font-size: 25px;
+    font-weight: 700;
+    color:var(--soft-red);
+}
+.item{
+    width: 100px;
+    height: 100px;
+    color:var(--soft-red);
+    background-color: var(--dark-desaturated-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:2rem;
+    margin:1rem;
+    font-weight: 700;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px 1px var(--very-dark-mostly-black-blue);
+    position: relative;
+}
+
+.social-links{
+    display: flex;
+    width: 200px;
+    margin:auto;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+
+.item--hour::before{
+    content: 'Hours';
+    position: absolute;
+    top:110px;
+    font-size: 1.1rem;
+    font-weight: 600;g
+}
+
+
+.item--minutes::before{
+    content: 'Minutes';
+    position: absolute;
+    top:110px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.item--seconds::before{
+    content: 'Seconds';
+    position: absolute;
+    top:110px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+@media screen and (max-width:500px) {
+    h1{
+        font-size: 2.5rem;
+    }
+}
